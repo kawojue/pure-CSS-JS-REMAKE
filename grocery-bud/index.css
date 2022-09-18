@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+    --pry-clr-0: #fff;
+    --pry-clr-1: rgb(241, 245, 248);
+    --pry-clr-3: rgb(165, 213, 248);
+    --pry-clr-4: rgb(73, 166, 233);
+    --pry-clr-5: rgb(97, 125, 152);
+    --pry-clr-6: rgb(6, 50, 81);
+    --pry-clr-7: rgb(230, 107, 107);
+    --pry-clr-8: rgb(187, 37, 37);
+    --pry-clr-9: hsl(125, 71%, 66%);
+    --pry-clr-10: hsl(125, 67%, 44%);
+    --padding: 2rem;
+    --trans: all 0.3s linear;
+    --radius: 0.5rem;
+    --spacing: 0.25rem;
+    --shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+}
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    background: var(--pry-clr-1);
+    text-transform: capitalize;
+}
+
+.section-center {
+    width: 100%;
+    max-width: 35rem;
+    margin: 1rem;
+    padding: var(--padding);
+    transition: var(--trans);
+    background: var(--pry-clr-0);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: calc(var(--radius)/2);
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    transition: var(--trans);
+}
+
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+
+.alert-caution {
+    color: #74640f;
+    background: #e8ec6e;
+}
+
+.grocery-form h3 {
+    letter-spacing: var(--spacing);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: var(--pry-clr-6);
+}
+
+.main-form {
+    display: flex;
+    justify-content: center;
+}
+
+#grocery {
+    height: 1.75rem;
+    padding: 0 calc(var(--padding)/2);
+    font-size: 1rem;
+    flex: 1 0 auto;
+    background: var(--pry-clr-1);
+    color: var(--pry-clr-5);
+    border-color: transparent;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+
+#grocery::placeholder {
+    font-family: var(--ff-secondary);
+    color: var(--clr-grey-5);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    transition: var(--trans);
+}
+
+.submit-btn {
+    padding: 0.25rem;
+    font-size: 0.85rem;
+    background: var(--pry-clr-3);
+    color: var(--pry-clr-6);
+    letter-spacing: calc(var(--spacing)/2);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+
+.submit-btn:focus {
+    border: 0.21875rem solid var(--pry-clr-4);
+}
+
+.submit-btn:hover {
+    color: var(--pry-clr-0);
+    background: var(--pry-clr-4);
+}
+
+.grocery-container {
+    display: grid;
+    place-items: center;
+    padding: 0 calc(var(--padding)/2);
+    margin-top: 2.5rem;
+    visibility: hidden;
+}
+
+.grocery-list {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.grocery-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--trans);
+    color: var(--pry-clr-6);
+}
+
+.grocery-section:hover {
+    color: var(--pry-clr-5);
+    background: var(--pry-clr-1);
+}
+
+.edit-btn,
+.delete-btn {
+    background: transparent;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+}
+
+.edit-btn {
+    color: var(--pry-clr-9);
+}
+
+.edit-btn:hover {
+    color: var(--pry-clr-10);
+}
+
+.delete-btn {
+    color: var(--pry-clr-7);
+}
+
+.delete-btn:hover {
+    color: var(--pry-clr-8);
+}
+
+.clear-btn {
+    background: transparent;
+    letter-spacing: var(--spacing);
+    color: var(--pry-clr-7);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+.clear-btn:hover {
+    color: var(--pry-clr-8);
+}
+
+.show-container {
+    visibility: visible;
+}
+
+@media screen and (max-width: 50rem) {
+    .section-center {
+        max-width: 30rem;
+    }
+
+    .grocery-form h3 {
+        font-size: 1.25rem;
+    }
+
+    .grocery-section p {
+        font-size: 0.85rem;
+    }
+}

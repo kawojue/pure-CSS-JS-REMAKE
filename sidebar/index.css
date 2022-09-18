@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --pry-color: rgb(73, 166, 233);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #F1F5F8;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.open-btn {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 30px;
+    color: var(--pry-color);
+    animation: bounce 2s linear infinite;
+    cursor: pointer;
+}
+
+.open-btn:hover {
+    color: rgba(89, 173, 235, 0.8);
+}
+
+.close-btn {
+    font-size: 32px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+    color: rgb(187,37,37);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    transform: scale(1.2) rotate(360deg);
+    color: rgba(187, 37, 37, 0.75);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    background: #fff;
+    transition: all 0.3s linear;
+    transform: translate(-100%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+.sidebar-header {
+    margin-top: 15px;
+    align-self: start;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style-type: none;
+}
+
+.links li {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 1rem 1.5rem;
+    transition: all 0.32s linear;
+}
+
+.links li:hover {
+    background: rgba(73, 166, 233, 0.75);
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 30px;
+    color: hsl(210, 22%, 49%);
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.social-icons a {
+    color: var(--pry-color);
+}
+
+.social-icons {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    gap: 1rem;
+}
+
+button {
+    border: transparent;
+    background: transparent;
+}
+
+@media screen and (max-width: 672px){
+    .sidebar {
+        width: 672px;
+    }
+}

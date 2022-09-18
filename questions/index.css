@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
+
+:root {
+    --pry-clr: rgb(197, 157, 95);
+}
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(241, 245, 248);
+    display: grid;
+    place-items: center;
+}
+
+.questions {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    margin: 10px;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.title {
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--pry-clr);
+    letter-spacing: 4px;
+}
+
+.section-center {
+    width: 80vw;
+    max-width: 95%;
+    display: grid;
+    place-items: center;
+    padding: 0.5rem auto;
+    gap: 2.25rem;
+}
+
+.question {
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-title p {
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.question-btn {
+    display: flex;
+    height: 2.5rem;
+    width: 60px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;
+    background: transparent;
+    border: transparent;
+}
+
+.question-btn:hover {
+    transform: rotate(90deg);
+}
+
+.plus-icon, .minus-icon {
+    font-size: 1.25rem;
+    color: var(--pry-clr);
+}
+
+.question-text {
+    margin-top: 10px;
+    border-top: 1px solid rgba(97, 125, 152, 0.4);
+}
+
+.question-text p {
+    margin-top: 15px;
+    color: rgb(97, 125, 152);
+}
+
+.question-text {
+    display: none;
+}
+.show-text .question-text {
+    display: block;
+}
+.minus-icon {
+    display: none;
+}
+.show-text .minus-icon {
+    display: inline;
+}
+.show-text .plus-icon {
+    display: none;
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --openBtn-clr: rgb(73, 166, 233);
+    --closeBtn-clr: rgb(187, 37, 37);
+    --text-clr: rgb(16, 42, 66);
+    --transition: all 0.3s linear;
+    --radius: 10px;
+    --maxWidth: 620px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-clr);
+    letter-spacing: 4px;
+}
+
+.hero {
+    min-height: 100vh;
+    background: url("./hero.jpeg") center/cover no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.banner {
+    background: #fff;
+    padding: 4rem 0;
+    border-radius: var(--radius);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    text-align: center;
+    width: 90vw;
+    max-width: var(--maxWidth);
+}
+
+.modal-container {
+    background: #fff;
+    border-radius: var(--radius);
+    width: 90vw;
+    height: 30vh;
+    max-width: var(--maxWidth);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 166, 233, 0.5);
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: -10;
+}
+
+.open-modal {
+    visibility: visible;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.open-btn {
+    color: #fff;
+    padding: 5px;
+    width: 175px;
+    height: 30px;
+    background: var(--openBtn-clr);
+    border: transparent;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 0.25rem;
+    transition: var(--transition);
+    box-shadow: var(--openBtn-clr) 0px 0px 0px 1px;
+}
+
+.open-btn:hover {
+    background: #fff;
+    color: var(--openBtn-clr);
+    border: 2px solid var(--openBtn-clr);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 30px;
+    color: var(--closeBtn-clr);
+    background: transparent;
+    border: transparent;
+    font-weight: 900;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color:rgba(187, 37, 37, 0.75);
+    transform: scale(1.2) rotate(360deg);
+}

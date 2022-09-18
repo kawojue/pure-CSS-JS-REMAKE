@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&display=swap');
+
+:root {
+    --bg-clr: rgb(241, 245, 248);
+    --pry-clr-1:  rgb(16, 42, 66);
+    --pry-clr-2: rgb(6, 50, 81);
+    --pry-clr-3: rgb(165, 213, 248);
+    --pry-clr-4: rgb(73, 166, 233);
+    --pry-clr-5: rgb(71, 171, 243);;
+    --pry-clr-6: rgb(97, 125, 152);
+    --spacing: 0.25rem;
+    --trans: all 320ms linear;
+    --radius: 0.3125rem;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
+    background: var(--bg-clr);
+    text-align: center;
+    letter-spacing: var(--spacing);
+}
+.section-center {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    margin: 5rem 1rem;
+}
+.lorem-form {
+    display: flex;
+    width: 21rem;
+    justify-content: space-between;
+    align-items: center;
+}
+h3 {
+    font-size: 1.75rem;
+    color: var(--pry-clr-1);
+}
+.paragraph {
+    font-size: 1.25rem;
+    color: var(--pry-clr-2);
+}
+#size {
+    width: 3.65rem;
+    height: 1.85rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.25rem;
+    padding: 0.125rem;
+}
+.btn {
+    width: 6.85rem;
+    height: 2.15rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: calc(var(--radius) * 2);
+    letter-spacing: calc(var(--spacing) / 2.5);
+    color: var(--pry-clr-1);
+    background: var(--pry-clr-5);
+}
+.btn:hover {
+    color: var(--pry-clr-4);
+    background: var(--pry-clr-3);
+    transition: var(--trans);
+}
+.lorem-text {
+    margin-top: 2.5rem;
+    max-width: 45rem;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    color: var(--pry-clr-6);
+}
+.lorem-text p {
+    line-height: 1.3125rem;
+    color: var(--pry-clr-2);
+    letter-spacing: normal;
+}
+
+@media screen and (max-width: 50rem) {
+    h3 {
+        font-size: 1.25rem;
+    }
+    .lorem-text {
+        max-width: 35rem;
+    }
+    .lorem-text p {
+        font-size: 0.85rem;
+    }
+}
