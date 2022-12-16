@@ -8,11 +8,6 @@ const weekdays = [
   "Wed", "Thu", "Fri", "Sat",
 ];
 
-//2019, 11, 21, 17, 42, 0
-const theDate = new Date(2019, 11, 21, 17, 42, 0);
-console.log(theDate);
-const days = ((theDate.getTime() - new Date().getTime())/(1000 * 60 * 60 * 24));
-console.log(Math.abs(Math.round(days)));
 
 // selectors..
 const giveaway = document.querySelector('.giveaway');
