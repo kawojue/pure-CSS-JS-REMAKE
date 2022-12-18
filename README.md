@@ -1,1 +1,1 @@
-# Learned from codding Addict then rewrote them myself.
+# This a practice project.
